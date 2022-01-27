@@ -13,7 +13,7 @@ def bot_search(request):
     query = request.GET.get('query')
 
     try:
-        client = wolframalpha.Client("5GVXWJ-J56GJA5XRU ") # Paste Your wolframalpha API Key Here....!!! Go to wolframalpha and Create your API key and paste it here.
+        client = wolframalpha.Client(" ") # Paste Your wolframalpha API Key Here....!!! Go to wolframalpha and Create your API key and paste it here.
         res = client.query(query)
         ans = next(res.results).text
         return render(request, 'Webbot/index.html',{'ans':ans,'query':query})
